@@ -1,0 +1,79 @@
+\chapter{软件环境及设置}
+
+该模版是基于CTeX社区发行的ctexbook模版，因此要使用该模版需要有CTeX环境。
+
+\section{Microsoft Windows系统}
+
+Windows系统下可以直接安装CTeX发行的软件包，该发行包只有32位版本，64位系统安装方法与32位略有不同。下面分别介绍。
+
+\subsection{32位系统}
+
+包括windows XP，Windows Server 2003，Vista， Windows Server 2008，Windows 7 和 Windows Server 2008 R2。
+
+32位系统下安装比较简单，直接从www.ctex.org下载最新的安装包，当前最新版为2.9.0.152，
+它包括CTeX环境，winEdit，MiKTeX，Ghostcript，几个部分，除CTeX环境外，
+另外几个组件都可以选择安装，如可以用TeXLive替代MiKTeX，UltraEdit，gvim，Emacs替代winEdit等。
+如果你不了解这几个软件，那么就默认安装选项即可。
+
+安装完后，需要对\LaTeX软件进行升级，如MiKTeX软件进行升级，升级的网络站点就选中科大的CTAN镜像站，
+网址http://mirrors.ustc.edu.cn/CTAN，在教育网内速度还是比较快的。
+
+之所以要把软件升级到最新是因为该模版使用了最新的hyperref包中添加的命令hidelinks。
+
+\subsection{64位系统}
+
+包括windows XP 64bit，Windows Server 2003 64bit，Vista 64bit，
+Windows Server 2008 64bit，Windows 7 64bit 和 Windows Server 2008 R2。
+
+安装CTeX安装包时，不要选择MiKTeX，其它软件任意，与32位一样。
+安装完CTeX包后，去www.miktex.org网站下载MiKTeX的最新64位版，当前是2.9版，
+安装后在设置页面中把CTeX的目录加到MiKTeX的Root目录中去，如图 \ref{setroot} 。
+再如图 \ref{rffndb} 所示，刷新MiKTeX的目录数据库，就可以使用CTeX的环境了。
+
+\begin{figure}[thp]
+\centering
+\includegraphics[scale=0.5]{./Pictures/setroot.eps}\\
+\caption{设置MiKTeX软件的Root目录}
+\label{setroot}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics[scale=0.5]{./Pictures/rffndb.eps}\\
+\caption{刷新MiKTeX的目录数据库}
+\label{rffndb}
+\end{figure}
+
+与32位Windows系统相同，安装完后也需要把MiKTeX升级到最新。
+
+\section{linux系统}
+
+请自行选择\LaTeX安装版本，然后把CTeX环境加入即可。我想用linux的应该都会这个吧。
+
+请保证扩展包版本足够新。尤其是hyperref包。
+
+\section{Mac系统}
+
+请自行选择\LaTeX安装版本，加入CTeX环境。同linux下。
+
+\section{本模版所需要的扩展包}
+
+\begin{enumerate}
+
+\item{图形、表格类扩展包} graphicx，array，booktabs-de，caption，natbib，multirow
+
+\item{字体类扩展包} times
+
+\item{目录选项扩展包} tocbibind，tocloft，makeidx，hyperref
+
+\item{数学公式扩展包} amsmath，amsthm，amsfonts，amssymb，bm
+
+\end{enumerate}
+
+\section{测试运行}
+
+如果已经安装好了CTeX环境与\LaTeX软件，那么，可以运行这个模版文件包里的makethesis.bat文件，
+几秒钟到十几秒后，如果生成了一份叫做“论文模版示例.pdf”的文档，那么，恭喜，这个模版所需要的软件环境建立成功！
+如果没有生成这一份文件，那么有可能你的软件环境没有配置正确，比如把\LaTeX软件升级到最新，
+这份模版所需要的扩展包没有被安装，请打开\LaTeX软件自动升级功能，
+保证\LaTeX软件能够成功地连接到CTAN站点下载所需的扩展功能包。
